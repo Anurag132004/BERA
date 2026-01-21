@@ -35,16 +35,17 @@ python src/main.py --output report.json
 ```
 
 ### Usage (Docker)
-To scan the host's Chrome extensions from Docker, you must mount the extension directory.
+For detailed instructions on running with Docker, see [DOCKER_GUIDE.md](DOCKER_GUIDE.md).
 
-**Windows Example (Powershell):**
+To distribute the agent, see [DISTRIBUTION.md](DISTRIBUTION.md).
+
+To scan the host's Chrome extensions from Docker:
 ```powershell
-docker build -t bera .
-docker run --rm -e OPENAI_API_KEY="sk-..." `
+docker run --rm -e GROQ_API_KEY="gsk_..." `
   -v "$env:LOCALAPPDATA/Google/Chrome/User Data/Default/Extensions:/data/extensions:ro" `
-  bera python src/main.py --output /app/report.json
+  -v "${PWD}/output:/app/output" `
+  anurag132004/bera:latest
 ```
-*Note: You might need to adjust the discovery logic or mount point if running inside Docker, as the agent looks for standard Windows paths by default. In a production containerized agent, you'd map the volume to a known path and tell the agent to scan that specific path.*
 
 ## Architecture
 - `src/discovery`: Logic to find extensions.

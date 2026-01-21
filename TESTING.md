@@ -1,24 +1,27 @@
 # How to Test BERA Agent
 
 ## Required APIs
-Currently, the **only** API key required is for **OpenAI** (ChatGPT). This is used by Module D to generate the risk score and summary.
+You can use **OpenAI** OR **Groq** for the risk assessment.
 
-**Variable Name:** `OPENAI_API_KEY`
+**Option A: Groq (Free / Fast)**
+Variable: `GROQ_API_KEY`
+Model: `llama3-70b-8192`
 
-If you do not provide this key, the agent will still run Discovery, Enrichment, and Static Scanning, but the Risk Score will be `UNKNOWN`.
+**Option B: OpenAI**
+Variable: `OPENAI_API_KEY`
+Model: `gpt-4`
 
 ## Testing Locally (Windows / PowerShell)
 
 ### 1. Set the API Key
-You need to set the environment variable in your terminal session.
-Replace `sk-...` with your actual OpenAI API Key.
+Set your Groq API key (provided by you):
 
 ```powershell
-$env:OPENAI_API_KEY = "sk-placeholder-key-replace-me"
+$env:GROQ_API_KEY = "gsk_YOUR_KEY_HERE"
 ```
 
 ### 2. Run the Agent
-Run the main script from the project root:
+Run the main script from the project root. This will scan your **local Chrome and Edge extensions** automatically.
 
 ```powershell
 python src/main.py --output my_report.json
@@ -30,16 +33,9 @@ Open `my_report.json` to see the findings.
 type my_report.json
 ```
 
-## Running Tests
-To verify the internal logic (Module A & C) matches expectations without running the full agent:
-```powershell
-python -m pytest
-```
-
 ## Troubleshooting
 - **No extensions found?** 
-  - Ensure you have Chrome or Edge installed in the default location.
-  - The agent looks in `%LOCALAPPDATA%\Google\Chrome\User Data\Default\Extensions`
-- **OpenAI Error?**
-  - Check your quota or if the key is valid.
-  - Ensure `pip install openai` was successful.
+  - The agent looks in standard Windows paths:
+    - Chrome: `%LOCALAPPDATA%\Google\Chrome\User Data\Default\Extensions`
+    - Edge: `%LOCALAPPDATA%\Microsoft\Edge\User Data\Default\Extensions`
+  - If you use a custom profile, you might need to edit `src/discovery/chrome.py` temporarily.

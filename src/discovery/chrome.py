@@ -86,10 +86,24 @@ class ChromiumDiscovery:
 
 class ChromeDiscovery(ChromiumDiscovery):
     def __init__(self):
-        # Default Windows path for Chrome
-        super().__init__("Chrome", r"%LOCALAPPDATA%\Google\Chrome\User Data\Default\Extensions")
+        # If running in Docker (or if /data/extensions exists), use that.
+        # Otherwise fallback to Windows default.
+        docker_path = "/data/extensions"
+        if os.path.exists(docker_path):
+             super().__init__("Chrome (Docker Volume)", docker_path)
+        else:
+             super().__init__("Chrome", r"%LOCALAPPDATA%\Google\Chrome\User Data\Default\Extensions")
 
 class EdgeDiscovery(ChromiumDiscovery):
     def __init__(self):
-        # Default Windows path for Edge
-        super().__init__("Edge", r"%LOCALAPPDATA%\Microsoft\Edge\User Data\Default\Extensions")
+        # If we mounted edge extensions to /data/edge_extensions, use that? 
+        # For simplicity, let's assume the user mounts the target browser's ext folder to /data/extensions
+        # But if we want to support both, we'd need multiple mount points.
+        # Let's keep it simple: if /data/extensions exists, ChromeDiscovery claims it. 
+        # EdgeDiscovery will effectively be disabled in Docker unless we add a specific path for it.
+        
+        docker_path = "/data/edge_extensions"
+        if os.path.exists(docker_path):
+            super().__init__("Edge (Docker Volume)", docker_path)
+        else:
+            super().__init__("Edge", r"%LOCALAPPDATA%\Microsoft\Edge\User Data\Default\Extensions")

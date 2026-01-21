@@ -29,6 +29,7 @@ class Extension:
 
 @dataclass
 class RiskReport:
+    run_id: str
     timestamp: str
     total_extensions: int
     high_risk_count: int

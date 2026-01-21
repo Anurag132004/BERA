@@ -11,8 +11,18 @@ except ImportError:
 class RiskAssessor:
     def __init__(self):
         self.api_key = os.getenv("OPENAI_API_KEY")
+        self.groq_api_key = os.getenv("GROQ_API_KEY")
         self.client = None
-        if self.api_key and OpenAI:
+        self.model = "gpt-4"
+
+        if self.groq_api_key and OpenAI:
+            self.client = OpenAI(
+                base_url="https://api.groq.com/openai/v1",
+                api_key=self.groq_api_key
+            )
+            # Updated to current supported model
+            self.model = "llama-3.3-70b-versatile" 
+        elif self.api_key and OpenAI:
             self.client = OpenAI(api_key=self.api_key)
 
     def assess(self, extension: Extension) -> Tuple[str, str]:
@@ -23,7 +33,7 @@ class RiskAssessor:
         
         try:
             response = self.client.chat.completions.create(
-                model="gpt-4", # Or gpt-3.5-turbo
+                model=self.model,
                 messages=[
                     {"role": "system", "content": "You are an expert Security Analyst. You assess browser extensions for security risks."},
                     {"role": "user", "content": prompt}
