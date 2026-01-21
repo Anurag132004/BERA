@@ -10,6 +10,7 @@ sys.path.append(os.path.dirname(os.path.abspath(__file__)))
 from src.discovery.manager import DiscoveryManager
 from src.enrichment.meta_client import EnrichmentClient
 from src.threat_intel.scanner import StaticScanner
+from src.llm.assessor import RiskAssessor
 from src.models import Extension, RiskReport
 
 def main():
@@ -24,6 +25,7 @@ def main():
 
     enricher = EnrichmentClient()
     scanner = StaticScanner()
+    assessor = RiskAssessor()
 
     processed_extensions = []
 
@@ -37,11 +39,13 @@ def main():
         # Module C: Static Scan
         scanner.scan_extension(ext)
         
-        # Module D: LLM Risk Assessment (Placeholder)
-        # TODO: Implement LLM integration
-        # ext.risk_score = llm_client.assess(ext)
+        # Module D: LLM Risk Assessment
+        score, reason = assessor.assess(ext)
+        ext.risk_score = score
+        ext.risk_summary = reason
         
         processed_extensions.append(ext)
+
 
     # Generate Report
     report = RiskReport(
