@@ -4,9 +4,12 @@ import glob
 from typing import List, Dict, Any
 from src.models import Extension
 
+# This is my base class for scanning Chromium-based browsers
+# Chrome and Edge both use the same extension format, so I made a parent class
 class ChromiumDiscovery:
     def __init__(self, browser_name: str, extensions_path: str):
         self.browser_name = browser_name
+        # expandvars converts %LOCALAPPDATA% to the actual path
         self.extensions_path = os.path.expandvars(extensions_path)
 
     def scan(self) -> List[Extension]:
@@ -14,22 +17,19 @@ class ChromiumDiscovery:
         if not os.path.exists(self.extensions_path):
             return extensions
 
-        # Chromium extensions are stored in directories named by AppID
-        # Inside AppID dir, there are version dirs. We usually want the latest version.
-        # Path: <Extensions_Root>/<AppID>/<Version>/manifest.json
-        
-        # List all AppIDs
+        # Chrome stores extensions like: Extensions/<AppID>/<Version>/manifest.json
+        # I need to find all the AppID folders first
         app_dirs = [d for d in glob.glob(os.path.join(self.extensions_path, "*")) if os.path.isdir(d)]
         
         for app_dir in app_dirs:
             app_id = os.path.basename(app_dir)
             
-            # Find version directories
+            # Each extension can have multiple versions, I want the latest
             version_dirs = [d for d in glob.glob(os.path.join(app_dir, "*")) if os.path.isdir(d)]
             if not version_dirs:
                 continue
                 
-            # Sort to get latest version (naive sort usually works, or parse semver)
+            # Sort to get the newest version (this works most of the time)
             version_dirs.sort(reverse=True)
             latest_version_dir = version_dirs[0]
             
@@ -42,25 +42,28 @@ class ChromiumDiscovery:
         return extensions
 
     def _parse_manifest(self, manifest_path: str, app_id: str, install_path: str) -> Extension:
+        # This is where I read the manifest.json and extract all the info I need
         try:
             with open(manifest_path, 'r', encoding='utf-8', errors='ignore') as f:
                 data = json.load(f)
                 
             name = data.get('name', 'Unknown')
-            # Handle localized names like __MSG_appName__? 
-            # For MVP we might just leave it or try to fallback.
-            # _locales/en/messages.json
+            # Note: Sometimes the name is like "__MSG_appName__" which means it's localized
+            # I'm not handling that for now, maybe later
             
             version = data.get('version', '0.0.0')
             description = data.get('description', '')
             author = data.get('author', '')
+            
+            # Sometimes author is a dict with an email field (Manifest V3)
             if isinstance(author, dict):
                 author = author.get('email', '')
             
             permissions = data.get('permissions', [])
             csp = data.get('content_security_policy', '')
+            
+            # CSP can also be a dict in MV3, so I convert it to string
             if isinstance(csp, dict):
-                # MV3 CSP is an object
                 csp = json.dumps(csp)
                 
             update_url = data.get('update_url', '')
@@ -80,28 +83,23 @@ class ChromiumDiscovery:
             )
             
         except Exception as e:
-            # Log error?
             print(f"Error parsing {manifest_path}: {e}")
             return None
 
+# Chrome-specific discovery
 class ChromeDiscovery(ChromiumDiscovery):
     def __init__(self):
-        # If running in Docker (or if /data/extensions exists), use that.
-        # Otherwise fallback to Windows default.
+        # If I'm running in Docker, the extensions will be mounted at /data/extensions
+        # Otherwise I use the Windows default path
         docker_path = "/data/extensions"
         if os.path.exists(docker_path):
-             super().__init__("Chrome (Docker Volume)", docker_path)
+            super().__init__("Chrome (Docker Volume)", docker_path)
         else:
-             super().__init__("Chrome", r"%LOCALAPPDATA%\Google\Chrome\User Data\Default\Extensions")
+            super().__init__("Chrome", r"%LOCALAPPDATA%\Google\Chrome\User Data\Default\Extensions")
 
+# Edge uses the same format as Chrome, just different path
 class EdgeDiscovery(ChromiumDiscovery):
     def __init__(self):
-        # If we mounted edge extensions to /data/edge_extensions, use that? 
-        # For simplicity, let's assume the user mounts the target browser's ext folder to /data/extensions
-        # But if we want to support both, we'd need multiple mount points.
-        # Let's keep it simple: if /data/extensions exists, ChromeDiscovery claims it. 
-        # EdgeDiscovery will effectively be disabled in Docker unless we add a specific path for it.
-        
         docker_path = "/data/edge_extensions"
         if os.path.exists(docker_path):
             super().__init__("Edge (Docker Volume)", docker_path)

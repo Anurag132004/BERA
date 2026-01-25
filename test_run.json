@@ -1,0 +1,1317 @@
+{
+  "run_id": "90a80d84",
+  "timestamp": "2026-01-25T23:57:21.368845",
+  "total": 11,
+  "extensions": [
+    {
+      "id": "annfbnbieaamhaimclajlajpijgkdblo",
+      "name": "__MSG_name__",
+      "version": "1.0.8",
+      "author": "Stefan vd",
+      "description": "__MSG_description__",
+      "browser": "Chrome",
+      "install_path": "C:\\Users\\anura\\AppData\\Local\\Google\\Chrome\\User Data\\Default\\Extensions\\annfbnbieaamhaimclajlajpijgkdblo\\1.0.8_0",
+      "manifest_content": {
+        "author": "Stefan vd",
+        "default_locale": "en",
+        "description": "__MSG_description__",
+        "icons": {
+          "128": "icons/icon128.png",
+          "16": "icons/icon16.png",
+          "48": "icons/icon48.png"
+        },
+        "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAlHQxcNyoUVdSz77ICB4pRJQ4HGA/Pez5X3xhZKGvrV55hFdB5SyFj9UEuAQWsMeYpnjm6+PMNQmFnqPPTFrcF7VAHSHbPHtU2+0Y+xHKSyVPYjTAO/dt9zIz8KlOUI6Onzc4GgI1Aj95h1Wl6+/IDv/beQpKR4PZR9OlfmA63Sp21zA8rO3Mbr/7cCnJRQOrDtxZ/j14bX47wLKCBZVZir+DH8nAZJTinC0Saf0K7zy74e/lJOrmKR4+lRb6XqV6gDYzxf8Lygb9keaUjYCQhb5UReJ9u2d3nvTLdZyoXm2eT1b7MMLbnrM9xmfDp6JYnb7SeumD/pDgST1X4UVkVwIDAQAB",
+        "manifest_version": 3,
+        "name": "__MSG_name__",
+        "theme": {
+          "colors": {
+            "bookmark_text": [
+              255,
+              255,
+              255
+            ],
+            "button_background": [
+              0,
+              0,
+              0,
+              0
+            ],
+            "frame": [
+              51,
+              51,
+              51
+            ],
+            "ntp_background": [
+              51,
+              51,
+              51
+            ],
+            "ntp_text": [
+              255,
+              255,
+              255
+            ],
+            "omnibox_background": [
+              25,
+              25,
+              25
+            ],
+            "omnibox_text": [
+              255,
+              255,
+              255
+            ],
+            "tab_background_text": [
+              214,
+              214,
+              214
+            ],
+            "tab_text": [
+              255,
+              255,
+              255
+            ],
+            "toolbar": [
+              51,
+              51,
+              51
+            ]
+          },
+          "images": {
+            "theme_frame": "images/theme_frame.png",
+            "theme_tab_background": "images/theme_tab_background.png",
+            "theme_toolbar": "images/theme_toolbar.png"
+          },
+          "properties": {
+            "ntp_background_alignment": "bottom",
+            "ntp_background_repeat": "no-repeat",
+            "ntp_logo_alternate": 0
+          },
+          "tints": {
+            "buttons": [
+              0,
+              0,
+              1
+            ]
+          }
+        },
+        "update_url": "https://clients2.google.com/service/update2/crx",
+        "version": "1.0.8"
+      },
+      "permissions": [],
+      "csp": "",
+      "update_url": "https://clients2.google.com/service/update2/crx",
+      "age_days": null,
+      "developer_email": null,
+      "extracted_urls": [
+        "https://clients2.google.com/service/update2/crx"
+      ],
+      "extracted_ips": [],
+      "risk_score": "Medium",
+      "risk_summary": "Risk: Medium\nReason: The extension's lack of transparency, with descriptions and names being placeholder text (__MSG_name__, __MSG_description__), and unknown extension age, raises concerns about its legitimacy and potential for malicious activity, despite having a relatively limited set of permissions and only connecting to a Google update service."
+    },
+    {
+      "id": "eeijfnjmjelapkebgockoeaadonbchdd",
+      "name": "Antigravity Browser Extension",
+      "version": "1.11.3",
+      "author": "",
+      "description": "The Antigravity Browser Extension is required for the Antigravity Agent to access the web.",
+      "browser": "Chrome",
+      "install_path": "C:\\Users\\anura\\AppData\\Local\\Google\\Chrome\\User Data\\Default\\Extensions\\eeijfnjmjelapkebgockoeaadonbchdd\\1.11.3_0",
+      "manifest_content": {
+        "action": {
+          "default_title": "Open Agent"
+        },
+        "background": {
+          "service_worker": "service_worker_binary.js"
+        },
+        "chrome_url_overrides": {
+          "newtab": "static/browserLanding.html"
+        },
+        "content_scripts": [
+          {
+            "all_frames": true,
+            "js": [
+              "content_script_binary.js"
+            ],
+            "matches": [
+              "<all_urls>"
+            ],
+            "run_at": "document_start"
+          }
+        ],
+        "content_security_policy": {
+          "extension_pages": "script-src 'self'; frame-src http://localhost:*;"
+        },
+        "description": "The Antigravity Browser Extension is required for the Antigravity Agent to access the web.",
+        "externally_connectable": {
+          "matches": [
+            "<all_urls>"
+          ]
+        },
+        "host_permissions": [
+          "<all_urls>"
+        ],
+        "icons": {
+          "128": "static/icons/128x128.png",
+          "16": "static/icons/16x16.png",
+          "32": "static/icons/32x32.png",
+          "48": "static/icons/48x48.png"
+        },
+        "key": "MIICIjANBgkqhkiG9w0BAQEFAAOCAg8AMIICCgKCAgEAzGU8KjvGP6USY0bYKCABW3pq/etOWTeFLk/rW0LsvtVR60dr8NOiqm3G+BwRNkr4fysvz+SblHdph8M7GexKCn9BTn0pBoDgkY3nT1eVxeOPM/2PjtKvGGA/GdfovZXAqMU3AN9S6OsX9a7IpHz8BmFDubJbDC61rSToL8txiQuHU7tDPlGaZvP2FXzF7zmoRsNblF5aoBAaOrjM3+sL9XCDckgugyZV4W7ci4JscywnOB/UvbGGERFcTSSGpMQJ8HZImmdXXp1VY1oZOVwsPw7U4+Sag1fVAXoQ7pJNSqmlwNlYeeeoBlHDa5blDeY6OrB0PUsJDzEkvMc75jgQTdN6pe1gxO895xhgIqfBZxIg/Od3pD9pKps4F4hKNmU/LRDMy4zAx5eNDTAU93EWCqpgzBF7TX2Y4z8L79BXL5hAqz2ESQaOp3mIpYWMwj2uLiYCjNx4c3YMwLiwIMuNJUe1l5ML2v0AneQwsbw8AW1/mlYTBEJixs0rj2o0LJHVRTIh8T4qhI4K0PhWzajR2F5fqdGvxBJuIHIizLEYB8nnuiDlyqIE3b9d+pcZUtIkzGiNTCluU4QEy4ciLRbRfT9yiXt9F5m3jX4y47j+Lq8DRwLGxdMz/nFXW8BZJRJVCZy4igUWTrE4NE0OEfIyHxqYz/+meboEEX5RPGOO0E0CAwEAAQ==",
+        "manifest_version": 3,
+        "name": "Antigravity Browser Extension",
+        "permissions": [
+          "activeTab",
+          "tabs",
+          "webRequest",
+          "storage",
+          "offscreen"
+        ],
+        "update_url": "https://clients2.google.com/service/update2/crx",
+        "version": "1.11.3",
+        "web_accessible_resources": [
+          {
+            "matches": [
+              "<all_urls>"
+            ],
+            "resources": []
+          }
+        ]
+      },
+      "permissions": [
+        "activeTab",
+        "tabs",
+        "webRequest",
+        "storage",
+        "offscreen"
+      ],
+      "csp": "{\"extension_pages\": \"script-src 'self'; frame-src http://localhost:*;\"}",
+      "update_url": "https://clients2.google.com/service/update2/crx",
+      "age_days": null,
+      "developer_email": null,
+      "extracted_urls": [
+        "https://deepmind.google/",
+        "https://clients2.google.com/service/update2/crx",
+        "http://localhost:*",
+        "http://www.w3.org/1999/xlink",
+        "http://www.w3.org/2000/svg"
+      ],
+      "extracted_ips": [],
+      "risk_score": "Medium",
+      "risk_summary": "Risk: Medium\nReason: The extension requires significant permissions, including webRequest and storage, and has an unclear purpose, but its connections to Google and lack of extracted IPs suggest some level of legitimacy and oversight."
+    },
+    {
+      "id": "eimadpbcbfnmbkopoojfekhnkhdbieeh",
+      "name": "Dark Reader",
+      "version": "4.9.118",
+      "author": "Alexander Shutau",
+      "description": "__MSG_extension_description__",
+      "browser": "Chrome",
+      "install_path": "C:\\Users\\anura\\AppData\\Local\\Google\\Chrome\\User Data\\Default\\Extensions\\eimadpbcbfnmbkopoojfekhnkhdbieeh\\4.9.118_0",
+      "manifest_content": {
+        "action": {
+          "default_icon": {
+            "19": "icons/dr_active_19.png",
+            "38": "icons/dr_active_38.png"
+          },
+          "default_popup": "ui/popup/index.html",
+          "default_title": "Dark Reader"
+        },
+        "author": "Alexander Shutau",
+        "background": {
+          "service_worker": "background/index.js"
+        },
+        "commands": {
+          "addSite": {
+            "description": "__MSG_toggle_current_site__",
+            "suggested_key": {
+              "default": "Alt+Shift+A"
+            }
+          },
+          "switchEngine": {
+            "description": "__MSG_theme_generation_mode__"
+          },
+          "toggle": {
+            "description": "__MSG_toggle_extension__",
+            "suggested_key": {
+              "default": "Alt+Shift+D"
+            }
+          }
+        },
+        "content_scripts": [
+          {
+            "all_frames": true,
+            "js": [
+              "inject/proxy.js"
+            ],
+            "match_about_blank": true,
+            "matches": [
+              "<all_urls>"
+            ],
+            "run_at": "document_start",
+            "world": "MAIN"
+          },
+          {
+            "all_frames": true,
+            "js": [
+              "inject/fallback.js",
+              "inject/index.js"
+            ],
+            "match_about_blank": true,
+            "matches": [
+              "<all_urls>"
+            ],
+            "run_at": "document_start",
+            "world": "ISOLATED"
+          },
+          {
+            "all_frames": false,
+            "js": [
+              "inject/color-scheme-watcher.js"
+            ],
+            "match_about_blank": false,
+            "matches": [
+              "<all_urls>"
+            ],
+            "run_at": "document_idle",
+            "world": "ISOLATED"
+          }
+        ],
+        "content_security_policy": {
+          "extension_pages": "default-src 'none'; script-src 'self'; style-src 'self'; img-src * data:; connect-src *; navigate-to 'self' https://darkreader.org/* https://github.com/darkreader/darkreader/blob/main/CONTRIBUTING.md https://github.com/darkreader/darkreader https://twitter.com/darkreaderapp; media-src 'none'; child-src 'none'; worker-src 'none'; object-src 'none'"
+        },
+        "default_locale": "en",
+        "description": "__MSG_extension_description__",
+        "host_permissions": [
+          "*://*/*"
+        ],
+        "icons": {
+          "128": "icons/dr_128.png",
+          "16": "icons/dr_16.png",
+          "48": "icons/dr_48.png"
+        },
+        "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAqBY2tfTtJYiVMirbII2r3WofqCDaxS2zwPddSsgxUWKRm/MW/ymL2ZaP24MmwnegGIoxHkBVyi4cps4/q76c98ViyijoQvdJjAv3ZtUOwbWlYnZ5pU6gPCeZrScHxoTJdxxJJ30DZpMc6qsc3yJVQJlABG2FQFPrhPEGFLP9sCq/M7pY1xH++KsG+jYLB6cU3ItvZ4zntUXRwG2ZBx+XZelsd6FdkVXbDXj/47TNk2Qq8PAqyiK45GgQ+KJjuISAo89ip1xI4tONLCjSHPinD3nz6HiMikQzwn4L8SsB4Wy7rBhMhPRGIWbwHed+L+W3LXhB05Lhwk0YxuOb7QNWRQIDAQAB",
+        "manifest_version": 3,
+        "minimum_chrome_version": "106.0.0.0",
+        "name": "Dark Reader",
+        "optional_permissions": [
+          "contextMenus"
+        ],
+        "options_ui": {
+          "page": "ui/popup/index.html"
+        },
+        "permissions": [
+          "alarms",
+          "fontSettings",
+          "scripting",
+          "storage"
+        ],
+        "update_url": "https://clients2.google.com/service/update2/crx",
+        "version": "4.9.118"
+      },
+      "permissions": [
+        "alarms",
+        "fontSettings",
+        "scripting",
+        "storage"
+      ],
+      "csp": "{\"extension_pages\": \"default-src 'none'; script-src 'self'; style-src 'self'; img-src * data:; connect-src *; navigate-to 'self' https://darkreader.org/* https://github.com/darkreader/darkreader/blob/main/CONTRIBUTING.md https://github.com/darkreader/darkreader https://twitter.com/darkreaderapp; media-src 'none'; child-src 'none'; worker-src 'none'; object-src 'none'\"}",
+      "update_url": "https://clients2.google.com/service/update2/crx",
+      "age_days": null,
+      "developer_email": null,
+      "extracted_urls": [
+        "https://github.githubassets.com/images/modules/site/codespaces/extensions-1.png",
+        "https://x.boardgamearena.net/data/themereleases/current/games/tobago/190401-1859/img/clue_cards.png",
+        "https://x.boardgamearena.net/data/themereleases/current/games/nextstation/220831-1241/img/mainpad_back.jpg",
+        "https://x.boardgamearena.net/data/themereleases/current/games/catcafe/221108-0942/img/catcafe_sheet.jpg",
+        "https://ziphoenicia-1300189285.cos.ap-shanghai.myqcloud.com/icon_svg/",
+        "https://spreadprivacy.com/content/images/2017/10/smiley.png",
+        "https://darkreader.org/terms/\\n\\nY\u00fcklemeden",
+        "https://i.imgur.com/ptX6Fv7.png",
+        "https://static.whatsapp.net/rsrc.php/v1/yQ/r/dPFl9fRFF9u.jpg",
+        "https://www.jpl.nasa.gov/assets/images/logo_nasa_trio_white@2x.png",
+        "https://r2.stablediffusionweb.com/images/background-faqs.jpg",
+        "https://github.githubassets.com/images/modules/site/home/dependabot-merge.png",
+        "https://x.boardgamearena.net/data/themereleases/current/games/catcafe/221108-0942/img/drawings_black.png",
+        "https://www.bahai.us/wp-content/themes/bahai2019/assets/images/bahai_logo_black.svg",
+        "https://images.versus.io/login_background.png",
+        "https://darkreader.org/support-us/",
+        "https://ziphoenicia-1300189285.cos.ap-shanghai.myqcloud.com/home_svg/zi-tools.svg",
+        "https://github.githubassets.com/favicon.ico",
+        "https://x.boardgamearena.net/data/themereleases/current/games/carnegie/210812-1806/img/timelines.png",
+        "https://github.githubassets.com/images/modules/site/codespaces/extensions-2.png",
+        "https://static.senscritique.com/img/layout/icons/chevrons/chevron-size3.png?201710121789416",
+        "https://postlight.com/",
+        "https://x-kom.pl",
+        "https://spreadprivacy.com/content/images/2017/07/linux",
+        "https://twitter.com/darkreaderapp",
+        "https://tweakers.net/g/if/categories/arrows.png",
+        "https://torrindex.net/images/tpbsmall_notext.jpg",
+        "https://github.githubassets.com/images/modules/site/home/community-discussions-",
+        "https://www.hcaptcha.com/",
+        "https://x.boardgamearena.net/data/themereleases/current/games/microdojo/221116-1802/img/barraks.png",
+        "https://x.boardgamearena.net/data/themereleases/current/games/romirami/240422-0303/img/card_contract.jpg",
+        "https://imgv3.fotor.com/images/background/background-image.png\\",
+        "https://cms.mistral.ai/assets",
+        "https://s1.pearlcdn.com/NAEU/contents/img/portal/news/news_detail_visual_top.png",
+        "https://darkreader.org/terms/\\n\\n\u0642\u0628\u0644",
+        "https://chromewebstore.google.com/",
+        "https://www.mozilla.org/",
+        "https://github.githubassets.com/images/modules/site/home/pr-comment.png",
+        "https://shopping.google.com",
+        "https://ssl.gstatic.com/docs/doclist/images/empty_state_details.png",
+        "https://github.githubassets.com/images/modules/site/icons/footer/github-logo.svg",
+        "https://staticz.novelgames.com/style/default/common_e.5.png",
+        "https://darkreader.org/tips/mobile/",
+        "https://static.coupangcdn.com/image/coupang/common/pc_header_img_sprite_new_gnb.svg#cart",
+        "https://github.githubassets.com/images/modules/site/codespaces/code.png",
+        "https://openclipart.org/image/24px/svg_to_png/28768/qubodup-Cubikopp-smilies",
+        "https://spreadprivacy.com/content/images/2018/02/DuckDuckGo-Extension_Desktop-OnDevice.jpg",
+        "https://x.boardgamearena.net/data/themereleases/current/games/agricola/230120-1146/img/action_frame.png",
+        "https://darkreader.org/terms/\\n\\nVoor",
+        "https://donate.mozilla.org/",
+        "https://x.boardgamearena.net/data/themereleases/current/games/agricola/230120-1146/img/action_frame_s.png",
+        "https://tweakers.net/g/if/v3/framework/menu_icons_responsive_v6.png",
+        "https://allmacworld.com/sylenth1-for-mac-free-download/",
+        "https://github.com/darkreader/darkreader/blob/main/CONTRIBUTING.md",
+        "https://github.githubassets.com/images/modules/site/home/pr-screen.png",
+        "https://flcu.org/resources/solutions/make-a-payment/",
+        "https://icons.iconarchive.com/icons/paomedia/small-n-flat/16/pencil-icon.png",
+        "https://fitgirl-repacks.site/games-with-my-personal-pink-paw-award/",
+        "https://i.imgur.com/1b5mZWZ.png",
+        "https://ziphoenicia-1300189285.cos.ap-shanghai.myqcloud.com/swjz/",
+        "https://github.githubassets.com/images/modules/site/codespaces/codespaces-icon.png",
+        "https://x.boardgamearena.net/data/themereleases/current/games/bandada/221108-1032/img/dicecard.png",
+        "https://www.womenheart.org/wp-content/uploads/2024/09/WomenHeart-Communities-1.webp",
+        "https://www.bankier.pl/",
+        "https://darkreader.org/terms/\\n\\n\u041f\u0440\u0435\u0434\u0438",
+        "https://latexmath.bolo-app.com/render/",
+        "https://i.pl/szukaj",
+        "https://i.pl/firmy",
+        "https://web-assets.strava.com/assets/react-18/precheckout/9470c6d4fbd5d9f1f0a1.png",
+        "https://duckduckgo.com/assets/logo_header.alt.v108.svg",
+        "https://torrent-stats.info/",
+        "https://spreadprivacy.com/content/images/2020/05/search-preference-menu_screen-sizes-1.jpg",
+        "https://www.pcgamingwiki.com/w/skins/overclocked/resources/icons/infobox-steamdb.svg?31569",
+        "https://a.gfx.ms/rte_metro2.png",
+        "https://pch24.pl",
+        "https://darkreader.org/terms/\\n\\nBefore",
+        "https://darkreader.org/terms/\\n\\nDeaktiver",
+        "https://allmacworld.com/waves-v11-complete-download-free/",
+        "https://darkreader.org/terms/\\n\\n\u5b89\u88dd\u524d\u8acb\u5148\u505c\u7528\u5176\u4ed6\u985e\u4f3c\u7684\u64f4\u5145\u5957\u4ef6\uff0c\u4ee5\u907f\u514d\u767c\u751f\u885d\u7a81\u3002\u795d\u60a8\u700f\u89bd\u6109\u5feb\uff01",
+        "https://talishar.net/assets/symbol-resource-bca42b67.png",
+        "https://github.githubassets.com/images/modules/site/codespaces/commit-workflow.png",
+        "https://darkreader.org/*",
+        "https://darkreader.org/goodluck/",
+        "https://x.boardgamearena.net/data/themereleases/current/games/bandada/221108-1032/img/birds312.png",
+        "https://spreadprivacy.com/content/images/2018/01/private-browsing-reasons-1.png",
+        "https://simplywall.st/?view",
+        "https://docs.google.com",
+        "https://x.boardgamearena.net/data/themereleases/current/games/littlefactory/220227-0736/img/Card4.jpg",
+        "https://duckduckgo.com/assets/icons/thirdparty/wikipedia.svg",
+        "https://x.boardgamearena.net/data/themereleases/current/games/tobago/190401-1859/img/hut.png",
+        "https://github.githubassets.com/images/modules/site/home/enterprise-city-w-logos.jpg",
+        "https://images.squarespace-cdn.com",
+        "https://static-assets.cargurus.com/images/site-p2p/homePageBanner/DD_Mobile_606bb2f4286d575e9a21b2f3ac776e8dd33d0deccf409fe1598859361ce63c05.png",
+        "https://x.boardgamearena.net/data/themereleases/current/games/kado/250219-0834/img/cards.jpg",
+        "https://static.senscritique.com/img/layout/icons/chevrons/chevron-size3@2x.png?201710121789416",
+        "https://torrindex.net/images/tpb.jpg",
+        "https://cdn-icons-png.flaticon.com/256/566/566015.png",
+        "https://darkreader.org/terms/\\n\\n\u041f\u0440\u0435",
+        "https://darkreader.org/terms/\\n\\n\u0db8\u0dd9\u0dba",
+        "https://s1.vnecdn.net/vnexpress/restruct/c/v1990/v2_2019/images/graphics/icon-eclick.svg",
+        "https://talishar.net/assets/turnWidget-Normal-89240b8d.png",
+        "https://github.githubassets.com/images/modules/site/home/pr-description.png",
+        "https://blog.arelion.com/wp-content/themes/arelion-blog-theme-kopia/public/images/ico/search-icon.svg",
+        "https://x.boardgamearena.net/data/themereleases/current/games/romirami/240422-0303/img/card_number.jpg",
+        "https://spreadprivacy.com/content/images/2020/10/trilateral-invitation_header-1.png",
+        "https://darkreader.org/terms/\\n\\n\u0e01\u0e48\u0e2d\u0e19\u0e17\u0e35\u0e48\u0e08\u0e30\u0e15\u0e34\u0e14\u0e15\u0e31\u0e49\u0e07",
+        "https://simplywall.st",
+        "https://x.boardgamearena.net/data/themereleases/current/games/splashdown/230808-1947/img/tokens.png",
+        "https://static.itch.io/images/logo-black-new.svg",
+        "https://x.boardgamearena.net/data/themereleases/current/games/takaraisland/170709-1847/img/wound.png",
+        "https://static.coupangcdn.com/image/coupang/common/pc_header_img_sprite_new_gnb.svg#person",
+        "https://x.boardgamearena.net/data/themereleases/current/games/kingoftokyo/230710-1229/img/evolution-cards.jpg",
+        "https://allmacworld.com/blocs-free-download/",
+        "https://x.boardgamearena.net/data/themereleases/current/games/rainforest/230403-1628/img/Tokens.png",
+        "http://www.w3.org/1999/xhtml",
+        "https://spreadprivacy.com/content/images/2020/05/search-preference-menu_heatmap.jpg",
+        "https://darkreader.org/terms/\\n\\n\uc124\uce58\ud558\uae30",
+        "https://apps.apple.com/app/",
+        "https://darkreader.org/terms/\\n\\nPrzed",
+        "https://darkreader.org/",
+        "http://www.festivals.mt",
+        "http://www.apache.org/licenses/",
+        "https://scontent.fiev25-1.fna.fbcdn.net/v/t39.2365-6/306317286_5514106962009770_3327930304024114088_n.jpg",
+        "https://darkreader.org/blog/",
+        "https://spreadprivacy.com/content/images/2017/10/https-in-address-bar26.png",
+        "https://github.githubassets.com/images/modules/site/home/community-readme-",
+        "https://www.google.com/maps",
+        "https://detexify.kirelabs.org/images/symbols-a95e7763.png",
+        "https://x.boardgamearena.net/data/themereleases/current/games/riftvalleyreserve/221228-1440/img/score_ref_vert.png",
+        "https://wonderhoyemu.github.io/EatKano/static/image/ClickBefore.png",
+        "https://www.baidu.com/img/PCfb_5bf082d29588c07f842ccde3f97243ea.png",
+        "https://clients2.google.com/service/update2/crx",
+        "https://github.githubassets.com/images/modules/site/home/dependabot-pr.png",
+        "https://s3.ultimate-guitar.com/musescore.scoredata/",
+        "https://darkreader.org/terms/\\n\\nIl",
+        "https://scp-wiki.wdfiles.com/local--files/component:theme/body_bg.png",
+        "https://darkreader.org/terms/\\n\\n\u05dc\u05e4\u05e0\u05d9",
+        "https://github.githubassets.com/images/modules/site/codespaces/dependency-rust.png",
+        "https://blog.arelion.com/wp-content/themes/arelion-blog-theme-kopia/public/images/logo.svg",
+        "https://darkreader.org/terms/\\n\\n\u041f\u0435\u0440\u0435\u0434",
+        "https://allmacworld.com/synapse-audio-legend-free-download/",
+        "https://wikimedia.org/api/rest_v1/media/math/render/svg",
+        "https://darkreader.org/terms/\\n\\nBitte",
+        "https://darkreader.org/help",
+        "https://darkreader.org/terms/\\n\\nPred",
+        "https://www.x-kom.pl",
+        "https://matrix.to/#/#general:knaben.org",
+        "https://darkreader.org/terms/\\n\\n\u0c2e\u0c40\u0c30\u0c41",
+        "https://darkreader.org/terms/\\n\\nF\u00f8r",
+        "https://microsoftedge.microsoft.com/addons",
+        "https://x.boardgamearena.net/data/themereleases/current/games/nextstation/221221-2031/img/scorepad.jpg",
+        "https://github.githubassets.com/images/modules/site/codespaces/dependency-3.png",
+        "https://darkreader.org/terms/\\n\\nBago",
+        "https://s3.castbox.fm/webstatic/images/userIcon.06c408dc.png",
+        "http://www.w3.org/1999/xlink",
+        "https://auth.fandom.com/auth/redirect?redirect=",
+        "https://www.defectivebydesign.org/sites/all/themes/dbd2/images/dbd-logo.png",
+        "https://tweakers.net/g/if/v3/framework/menu_icons_v2.png",
+        "https://darkreader.org/terms/\\n\\nPrima",
+        "https://darkreader.org/privacy/",
+        "https://github.githubassets.com/images/modules/site/codespaces/commit-3.png",
+        "https://x.boardgamearena.net/data/themereleases/current/games/littlefactory/220227-0736/img/Card1.jpg",
+        "https://cppm3144.itdhosting.de/niku/ui/uitk/images/odf.png",
+        "https://darkreader.org/terms/\\n\\n\u0921\u093e\u0930\u094d\u0915",
+        "https://darkreader.org/terms/\\n\\nInaktivera",
+        "https://spreadprivacy.com/content/images/2018/09/private-browsing4.png",
+        "https://darkreader.org/terms/\\n\\nX\u00f3a",
+        "https://dej.rae.es",
+        "https://fonts.googleapis.com/",
+        "https://github.githubassets.com/images/modules/site/codespaces/dependencies-",
+        "https://x.boardgamearena.net/data/themereleases/current/games/riichimahjong/220818-0132/img/mahjongg_japan_annot.png",
+        "https://images.mentimeter.com/themes/832111/tyett7pf-brand-light.svg",
+        "https://i.imgur.com/FrkDinQ.png",
+        "https://musescore.com/static/musescore/scoredata/",
+        "https://bugzilla.opensuse.org/skins/contrib/openSUSE/noise.png",
+        "https://staticz.novelgames.com/style/default/common.8.png",
+        "https://x.boardgamearena.net/data/themereleases/current/games/littlefactory/220227-0736/img/Card5.jpg",
+        "https://cdn.blahdns.com/logo.png",
+        "https://hypothes.is",
+        "https://github.githubassets.com/images/modules/site/codespaces/workflow-view.png",
+        "https://www.minecraftskins.com/bundles/app/images/mask.png",
+        "https://shapecatcher.com/svg/",
+        "https://geex.x-kom.pl/",
+        "https://darkreader.org/terms/\\n\\nP\u0159ed",
+        "https://www.flaggenlexikon.de/pix/flaggenlexikon.gif",
+        "http://www.w3.org/2000/svg",
+        "https://github.com/darkreader/darkreader/blob/main/LICENSE",
+        "https://duckduckgo.com/assets/logo_homepage.alt.v108.svg",
+        "https://darkreader.org/terms/\\n\\n\u03a0\u03c1\u03b9\u03bd",
+        "https://darkreader.org/terms/\\n\\n\u0987\u09a8\u09b8\u09cd\u099f\u09b2",
+        "https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/collections/learn-to-code/learn-to-code.png",
+        "https://www.gstatic.com/android/market_images/web/play_prism_hlock_2x.png",
+        "https://x.boardgamearena.net/data/themereleases/current/games/catcafe/221108-0942/img/catfootprint.png",
+        "https://x.boardgamearena.net/data/themereleases/current/games/littlefactory/220227-0736/img/Card3.jpg",
+        "https://github.githubassets.com/images/modules/site/home/gh-desktop.png",
+        "https://github.com/darkreader/darkreader",
+        "https://allmacworld.com/3dequalizer-4-for-mac-free-download/",
+        "https://blog.arelion.com/wp-content/themes/arelion-blog-theme-kopia/public/images/ico/right-arrow.png",
+        "https://www.gnu.org/licenses/license-list.html#NoLicense",
+        "https://raw.githubusercontent.com/darkreader/darkreader/main/src/config",
+        "https://darkreader.org/terms/\\n\\n\u041f\u0435\u0440\u0430\u0434",
+        "https://darkreader.org/terms/\\n\\nSebelum",
+        "https://darkreader.org/terms/\\n\\n\u5b89\u88c5\u524d\u8bf7\u7981\u7528\u7c7b\u4f3c\u7684\u6269\u5c55\u3002\u795d\u60a8\u6d4f\u89c8\u6109\u5feb\uff01",
+        "https://tweakers.net/g/icons/commentcounter_small_bg.svg",
+        "https://github.githubassets.com/images/email/explore/explore-gradient-icon.png",
+        "https://chrome.google.com/webstore",
+        "https://github.githubassets.com/images/modules/site/home/pr-merge.png",
+        "https://jegy.mav.hu//PlaceReservationIcons/Graphic/Cars/wagon_base-empty.svg",
+        "https://cdn.blahdns.com/kofi4.png",
+        "http://www.emcdda.europa.eu/about",
+        "https://spreadprivacy.com/content/images/2020/05/search-preference-menu_comparison-1.jpg",
+        "https://spreadprivacy.com/content/images/2020/02/Awareness-of-Privacy-Risk-of-Public-USB-Charging-.jpg",
+        "https://google.com/",
+        "https://x.boardgamearena.net/data/themereleases/current/games/littlefactory/220227-0736/img/Card2.jpg",
+        "https://forms.gle",
+        "https://bi.im-g.pl/im/0/24525/m24525630.png",
+        "https://spreadprivacy.com/content/images/2017/11/Significant-Actions",
+        "https://stackoverflow.co/teams",
+        "https://s0.wp.com/latex.php",
+        "https://darkreader.org/blog/posts.json",
+        "https://spreadprivacy.com/content/images/2018/09/ddg-traffic",
+        "https://darkreader.org/terms/\\n\\n\u00cenainte",
+        "https://www.theguardian.com/documentaries",
+        "https://x.boardgamearena.net/data/themereleases/current/games/catcafe/221108-0942/img/column_scoring.png",
+        "https://github.githubassets.com/images/modules/site/home/community-sponsor-",
+        "https://darkreader.org",
+        "https://darkreader.org/terms/\uff09\u3092\u304a\u8aad\u307f\u304f\u3060\u3055\u3044\u3002\\n\\n\u30a4\u30f3\u30b9\u30c8\u30fc\u30eb\u3059\u308b\u524d\u306b\u3001\u540c\u69d8\u306e\u62e1\u5f35\u6a5f\u80fd\u3092\u7121\u52b9\u306b\u3057\u3066\u304f\u3060\u3055\u3044\u3002\u30b5\u30a4\u30c8\u95b2\u89a7\u3092\u304a\u697d\u3057\u307f\u304f\u3060\u3055\u3044\uff01",
+        "https://simplywall.st/stocks/nz/transportation/",
+        "https://darkreader.org/terms/\\n\\nAntes",
+        "https://www2.telegeography.com/hubfs/",
+        "https://ssl.gstatic.com/social/contactsui/images/emptycontacts/emptycontacts_animation_",
+        "https://tweakers.net/g/if/v3/framework/tweakers_logo_full.svg",
+        "http://www.apache.org/licenses/LICENSE-2.0",
+        "https://www.gstatic.com/images/branding/googlelogo",
+        "https://www.youtube.com/embed",
+        "https://cdn.prod.website-files.com/648009cb318551f1806b36b4/67614e7c7d4c0cf325ab0154_about-us-header.jpg"
+      ],
+      "extracted_ips": [
+        "106.0.0.0"
+      ],
+      "risk_score": "Low",
+      "risk_summary": "Risk: Low\nReason: The extension's permissions are reasonable for its functionality, and the Content Security Policy (CSP) is well-defined, restricting script and resource access to minimize potential security risks."
+    },
+    {
+      "id": "ghbmnnjooekpmoecnnnilnnbdlolhkhi",
+      "name": "__MSG_extName__",
+      "version": "1.99.1",
+      "author": "docs-hosted-app-own@google.com",
+      "description": "__MSG_extDesc__",
+      "browser": "Chrome",
+      "install_path": "C:\\Users\\anura\\AppData\\Local\\Google\\Chrome\\User Data\\Default\\Extensions\\ghbmnnjooekpmoecnnnilnnbdlolhkhi\\1.99.1_0",
+      "manifest_content": {
+        "author": {
+          "email": "docs-hosted-app-own@google.com"
+        },
+        "background": {
+          "service_worker": "service_worker_bin_prod.js"
+        },
+        "content_capabilities": {
+          "matches": [
+            "https://docs.google.com/*",
+            "https://drive.google.com/*",
+            "https://drive-autopush.corp.google.com/*",
+            "https://drive-daily-0.corp.google.com/*",
+            "https://drive-daily-1.corp.google.com/*",
+            "https://drive-daily-2.corp.google.com/*",
+            "https://drive-daily-3.corp.google.com/*",
+            "https://drive-daily-4.corp.google.com/*",
+            "https://drive-daily-5.corp.google.com/*",
+            "https://drive-daily-6.corp.google.com/*",
+            "https://drive-preprod.corp.google.com/*",
+            "https://drive-staging.corp.google.com/*"
+          ],
+          "permissions": [
+            "clipboardRead",
+            "clipboardWrite",
+            "unlimitedStorage"
+          ]
+        },
+        "content_security_policy": {
+          "extension_pages": "script-src 'self'; object-src 'self'"
+        },
+        "default_locale": "en_US",
+        "description": "__MSG_extDesc__",
+        "externally_connectable": {
+          "matches": [
+            "https://docs.google.com/*",
+            "https://drive.google.com/*",
+            "https://drive-autopush.corp.google.com/*",
+            "https://drive-daily-0.corp.google.com/*",
+            "https://drive-daily-1.corp.google.com/*",
+            "https://drive-daily-2.corp.google.com/*",
+            "https://drive-daily-3.corp.google.com/*",
+            "https://drive-daily-4.corp.google.com/*",
+            "https://drive-daily-5.corp.google.com/*",
+            "https://drive-daily-6.corp.google.com/*",
+            "https://drive-preprod.corp.google.com/*",
+            "https://drive-staging.corp.google.com/*"
+          ]
+        },
+        "host_permissions": [
+          "https://docs.google.com/*",
+          "https://drive.google.com/*"
+        ],
+        "icons": {
+          "128": "128.png"
+        },
+        "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAnF7RGLAxIon0/XeNZ4MLdP3DMkoORzEAKVg0sb89JpA/W2osTHr91Wqwdc9lW0mFcSpCYS9Y3e7cUMFo/M2ETASIuZncMiUzX2/0rrWtGQ3UuEj3KSe5PdaVZfisyJw/FebvHwirEWrhqcgzVUj9fL9YjE0G45d1zMKcc1umKvLqPyTznNuKBZ9GJREdGLRJCBmUgCkI8iwtwC+QZTUppmaD50/ksnEUXv+QkgGN07/KoNA5oAgo49Jf1XBoMv4QXtVZQlBYZl84zAsI82hb63a6Gu29U/4qMWDdI7+3Ne5TRvo6Zi3EI4M2NQNplJhik105qrz+eTLJJxvf4slrWwIDAQAB",
+        "manifest_version": 3,
+        "minimum_chrome_version": "88",
+        "name": "__MSG_extName__",
+        "permissions": [
+          "alarms",
+          "storage",
+          "unlimitedStorage",
+          "offscreen"
+        ],
+        "storage": {
+          "managed_schema": "dasherSettingSchema.json"
+        },
+        "update_url": "https://clients2.google.com/service/update2/crx",
+        "version": "1.99.1",
+        "web_accessible_resources": [
+          {
+            "matches": [
+              "<all_urls>"
+            ],
+            "resources": [
+              "page_embed_script.js"
+            ]
+          }
+        ]
+      },
+      "permissions": [
+        "alarms",
+        "storage",
+        "unlimitedStorage",
+        "offscreen"
+      ],
+      "csp": "{\"extension_pages\": \"script-src 'self'; object-src 'self'\"}",
+      "update_url": "https://clients2.google.com/service/update2/crx",
+      "age_days": null,
+      "developer_email": null,
+      "extracted_urls": [
+        "https://drive-autopush.corp.google.com/*",
+        "https://drive-daily-2.corp.google.com/*",
+        "https://www.gstatic.com/_/apps-fileview/_/js/",
+        "https://drive-preprod.corp.google.com/*",
+        "http://www.broofa.com",
+        "https://drive-daily-1.corp.google.com/*",
+        "https://drive-daily-4.corp.google.com/*",
+        "https://drive-daily-6.corp.google.com/*",
+        "https://drive.google.com/*",
+        "https://drive-daily-0.corp.google.com/*",
+        "https://drive-daily-3.corp.google.com/*",
+        "https://drive-daily-5.corp.google.com/*",
+        "https://clients2.google.com/service/update2/crx",
+        "https://cdnjs.cloudflare.com/ajax/libs/mathjax/;secured-pixel.com;Can",
+        "https://meet\\\\.google\\\\.com/.*meetsw.*load",
+        "https://drive-staging.corp.google.com/*",
+        "https://docs.google.com/*"
+      ],
+      "extracted_ips": [],
+      "risk_score": "Low",
+      "risk_summary": "Risk: Low\nReason: The extension is authored by Google and has a limited set of permissions, with no extracted IPs and mostly Google-owned URLs, indicating a low risk of malicious activity."
+    },
+    {
+      "id": "ifbmcpbgkhlpfcodhjhdbllhiaomkdej",
+      "name": "__MSG_appName__",
+      "version": "0.1.11.5",
+      "author": "",
+      "description": "__MSG_appDescription__",
+      "browser": "Chrome",
+      "install_path": "C:\\Users\\anura\\AppData\\Local\\Google\\Chrome\\User Data\\Default\\Extensions\\ifbmcpbgkhlpfcodhjhdbllhiaomkdej\\0.1.11.5_0",
+      "manifest_content": {
+        "background": {
+          "page": "background.html"
+        },
+        "content_security_policy": "default-src 'none'; script-src 'self'",
+        "default_locale": "en",
+        "description": "__MSG_appDescription__",
+        "externally_connectable": {
+          "matches": [
+            "https://*.officeapps.live.com/*",
+            "https://*.partner.officewebapps.cn/*",
+            "https://*.gov.online.office365.us/*",
+            "https://*.dod.online.office365.us/*",
+            "https://project.microsoft.com/*",
+            "https://*.whiteboard.microsoft.com/*",
+            "https://whiteboard.office.com/*",
+            "https://whiteboard.office365.us/*",
+            "https://whiteboard.apps.mil/*"
+          ]
+        },
+        "icons": {
+          "128": "icon128.png",
+          "16": "icon16.png",
+          "48": "icon48.png"
+        },
+        "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAmp2qFz1h+JVQgET5pVpagY/V8irNnPtT28E0lktmGiCrogrHXwLLYK17D7nK8SmdhZUfKN2/FB4BKBKsDlx4EHcRMI0UETrXEMlxCkwUPwc9/9AyqEfDaI9mQg9fJTE8uswTHOKZhmUwoMehhSdYPLe52NDGPcvBlQ/y6b20z0IrX4wclNRPae9+oBoAUju06LoVesEyIzJb2QCeqximdlMcJkqS2tSKkTeYL+oJMuMou/Um6LfoQj/FPK2bsyJcU826HmBrIsFXoo3D+XAxLCVznxlyldjusLsjpxxVPFem+rUdxX5/ZjB9SkXpgJOis/5zB/3APh5+xblyiTAYtQIDAQAB",
+        "manifest_version": 2,
+        "minimum_chrome_version": "26",
+        "name": "__MSG_appName__",
+        "permissions": [
+          "clipboardRead"
+        ],
+        "update_url": "https://clients2.google.com/service/update2/crx",
+        "version": "0.1.11.5"
+      },
+      "permissions": [
+        "clipboardRead"
+      ],
+      "csp": "default-src 'none'; script-src 'self'",
+      "update_url": "https://clients2.google.com/service/update2/crx",
+      "age_days": null,
+      "developer_email": null,
+      "extracted_urls": [
+        "https://project.microsoft.com/*",
+        "https://whiteboard.office.com/*",
+        "https://whiteboard.apps.mil/*",
+        "https://clients2.google.com/service/update2/crx",
+        "https://whiteboard.office365.us/*"
+      ],
+      "extracted_ips": [
+        "0.1.11.5"
+      ],
+      "risk_score": "Medium",
+      "risk_summary": "Risk: Medium\nReason: The extension has limited permissions (clipboardRead) and a restrictive CSP, but its unknown age and lack of author information raise concerns, and the extracted URLs suggest potential data exchange with external services, including Microsoft and Google."
+    },
+    {
+      "id": "jghecgabfgfdldnmbfkhmffcabddioke",
+      "name": "__MSG_app_name__",
+      "version": "2.4.0",
+      "author": "",
+      "description": "__MSG_app_description__",
+      "browser": "Chrome",
+      "install_path": "C:\\Users\\anura\\AppData\\Local\\Google\\Chrome\\User Data\\Default\\Extensions\\jghecgabfgfdldnmbfkhmffcabddioke\\2.4.0_0",
+      "manifest_content": {
+        "action": {
+          "default_icon": {
+            "19": "icon/icon-19.png",
+            "38": "icon/icon-38.png"
+          },
+          "default_popup": "html/popup.html",
+          "default_title": "__MSG_app_name__"
+        },
+        "background": {
+          "service_worker": "js/service-worker.js"
+        },
+        "default_locale": "en",
+        "description": "__MSG_app_description__",
+        "icons": {
+          "128": "icon/icon-128.png",
+          "16": "icon/icon-16.png",
+          "32": "icon/icon-32.png",
+          "48": "icon/icon-48.png"
+        },
+        "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAhfKbpgXp2PziEPDFKE67OxD350qx6usAAKxtQGFp4Aby6YIWPy1zbEsSbHzvosOpCYibHkCIWlD/quFfUN0h4/9w3VLasdTEy4Oio6Yy/Eaej5S63PFJ6C3KleD3NDxhU/qjsmcdjGaaKNcbasBaqqPfio9J/M59vlcaY80QPUyqJ8WdfMsUd1AmXEJlKYRI3JuRtqg3mL9jtYsBmHWYcE23vvMI+NZRoCzYaf0jH53odOzh5zwo5CfS66HR+CHpPgJbzjn+mNs0JbgQHfldDaB4VzMCu2ULAWq1vLvrxZY4PtrSNkxrFcRxvnuZg+eZJ0F7ZIKdhHKtUVDLxOcmPQIDAQAB",
+        "manifest_version": 3,
+        "name": "__MSG_app_name__",
+        "permissions": [
+          "activeTab",
+          "offscreen",
+          "tabCapture",
+          "tabs",
+          "storage"
+        ],
+        "update_url": "https://clients2.google.com/service/update2/crx",
+        "version": "2.4.0"
+      },
+      "permissions": [
+        "activeTab",
+        "offscreen",
+        "tabCapture",
+        "tabs",
+        "storage"
+      ],
+      "csp": "",
+      "update_url": "https://clients2.google.com/service/update2/crx",
+      "age_days": null,
+      "developer_email": null,
+      "extracted_urls": [
+        "https://chromewebstore.google.com/detail/akannjhnhbfgceibnngofjbnncmelcjg",
+        "https://chromewebstore.google.com/detail/jkeollhjmejjhladkmblbcgbnibbnoko",
+        "https://www.petasittek.com/volume-master/pay-what-you-like/",
+        "https://www.petasittek.com/?utm_source=volume-master&utm_medium=browser-extension&utm_campaign=chrome&utm_content=footer",
+        "https://chromewebstore.google.com/detail/${f}/reviews`:g===d?`https://microsoftedge.microsoft.com/addons/detail/${f}`:void",
+        "https://chromewebstore.google.com/detail/fflcgbahhodkmllfoeldoiaemngpiphj",
+        "https://www.petasittek.com/",
+        "https://chromewebstore.google.com/detail/ppaojnbmmaigjmlpjaldnkgnklhicppk",
+        "https://clients2.google.com/service/update2/crx",
+        "https://petasittek.zendesk.com/hc/en-us/requests/new",
+        "http://www.w3.org/2000/svg"
+      ],
+      "extracted_ips": [],
+      "risk_score": "Medium",
+      "risk_summary": "Risk: Medium\nReason: The extension has a moderate number of permissions, including access to active tabs, tab capture, and storage, which could potentially be used for data collection or manipulation, but the lack of extracted IPs and the presence of legitimate-looking URLs, such as the Chrome Web Store and a support website, suggest that the extension is likely a legitimate tool, possibly a volume control or audio management extension, with some potential for abuse."
+    },
+    {
+      "id": "nmmhkkegccagdldgiimedpiccmgmieda",
+      "name": "__MSG_APP_NAME__",
+      "version": "1.0.0.6",
+      "author": "",
+      "description": "__MSG_APP_DESCRIPTION__",
+      "browser": "Chrome",
+      "install_path": "C:\\Users\\anura\\AppData\\Local\\Google\\Chrome\\User Data\\Default\\Extensions\\nmmhkkegccagdldgiimedpiccmgmieda\\1.0.0.6_0",
+      "manifest_content": {
+        "app": {
+          "background": {
+            "scripts": [
+              "craw_background.js"
+            ]
+          }
+        },
+        "default_locale": "en",
+        "description": "__MSG_APP_DESCRIPTION__",
+        "display_in_launcher": false,
+        "display_in_new_tab_page": false,
+        "icons": {
+          "128": "images/icon_128.png",
+          "16": "images/icon_16.png"
+        },
+        "key": "MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQCrKfMnLqViEyokd1wk57FxJtW2XXpGXzIHBzv9vQI/01UsuP0IV5/lj0wx7zJ/xcibUgDeIxobvv9XD+zO1MdjMWuqJFcKuSS4Suqkje6u+pMrTSGOSHq1bmBVh0kpToN8YoJs/P/yrRd7FEtAXTaFTGxQL4C385MeXSjaQfiRiQIDAQAB",
+        "manifest_version": 2,
+        "minimum_chrome_version": "29",
+        "name": "__MSG_APP_NAME__",
+        "oauth2": {
+          "auto_approve": true,
+          "client_id": "203784468217.apps.googleusercontent.com",
+          "scopes": [
+            "https://www.googleapis.com/auth/sierra",
+            "https://www.googleapis.com/auth/sierrasandbox",
+            "https://www.googleapis.com/auth/chromewebstore",
+            "https://www.googleapis.com/auth/chromewebstore.readonly"
+          ]
+        },
+        "permissions": [
+          "identity",
+          "webview",
+          "https://www.google.com/",
+          "https://www.googleapis.com/*",
+          "https://payments.google.com/payments/v4/js/integrator.js",
+          "https://sandbox.google.com/payments/v4/js/integrator.js"
+        ],
+        "update_url": "https://clients2.google.com/service/update2/crx",
+        "version": "1.0.0.6"
+      },
+      "permissions": [
+        "identity",
+        "webview",
+        "https://www.google.com/",
+        "https://www.googleapis.com/*",
+        "https://payments.google.com/payments/v4/js/integrator.js",
+        "https://sandbox.google.com/payments/v4/js/integrator.js"
+      ],
+      "csp": "",
+      "update_url": "https://clients2.google.com/service/update2/crx",
+      "age_days": null,
+      "developer_email": null,
+      "extracted_urls": [
+        "https://accounts.google.com/MergeSession",
+        "https://www.googleapis.com/auth/chromewebstore",
+        "https://sandbox.google.com/payments/v4/js/integrator.js",
+        "https://www.googleapis.com",
+        "https://www.google.com/images/dot2.gif",
+        "https://www.googleapis.com/auth/sierrasandbox",
+        "https://github.com/google/closure-library/wiki/goog.module:-an-ES6-module-like-alternative-to-goog.provide",
+        "https://www.google.com/intl/en-US/chrome/blank.html",
+        "https://www.googleapis.com/*",
+        "https://www.googleapis.com/auth/chromewebstore.readonly",
+        "https://www.google.com/images/cleardot.gif",
+        "https://www.google.com/images/x2.gif",
+        "https://www.google.com/",
+        "https://www-googleapis-staging.sandbox.google.com",
+        "https://www.google.com/accounts/OAuthLogin?issueuberauth=1",
+        "https://www.googleapis.com/auth/sierra",
+        "https://clients2.google.com/service/update2/crx",
+        "https://payments.google.com/payments/v4/js/integrator.js"
+      ],
+      "extracted_ips": [
+        "1.0.0.6"
+      ],
+      "risk_score": "Medium",
+      "risk_summary": "Risk: Medium\nReason: The extension has a limited number of reviews and unknown age, but its permissions and extracted URLs suggest a strong connection to Google services, which could indicate a legitimate purpose, however, the lack of author information and vague description raise concerns about potential data collection or misuse."
+    },
+    {
+      "id": "cgjgjfacjflmgphhhepmbhhbgjieaecn",
+      "name": "Microsoft Edge Unminification Extension",
+      "version": "135.0.3176.0",
+      "author": "",
+      "description": "Provides Named Function Ranges from typescript's compiler to augment sourcemap scopes information",
+      "browser": "Edge",
+      "install_path": "C:\\Users\\anura\\AppData\\Local\\Microsoft\\Edge\\User Data\\Default\\Extensions\\cgjgjfacjflmgphhhepmbhhbgjieaecn\\135.0.3176.0_0",
+      "manifest_content": {
+        "description": "Provides Named Function Ranges from typescript's compiler to augment sourcemap scopes information",
+        "devtools_page": "DevToolsPlugin.html",
+        "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAiMfSIPlj0PRSUeFx85BNsj/QeZ3AhvP4ScF9UxY8S+OWRyP7RcqU0e5E2okxSBD4r+L0MerEVIaUPyuMCfY4gn+Cc0CPCw/EtG/17Z0Sx9PgiM71CgWa07TYXZQXQW+K32FWf5v35prF2m75SNOUG2b4J3HMf1YkCWhEi2URHmNKIIJjrABdm5mBUzLAMM5ZKAAK9voekfq4YETl58ClarnTjM7pKBw2NvrSSuZCj5llCQoZcdfUAkOBtHyXqhmjEiVVeO2du1jDlPuVPs3YqCM99Q+kTASfUfLSV3vosx1lonpghMj9CPcOxpQrI8ybqPY24b5sv4ULigpaZL6RLwIDAQAB",
+        "manifest_version": 3,
+        "name": "Microsoft Edge Unminification Extension",
+        "update_url": "https://edge.microsoft.com/extensionwebstorebase/v1/crx",
+        "version": "135.0.3176.0"
+      },
+      "permissions": [],
+      "csp": "",
+      "update_url": "https://edge.microsoft.com/extensionwebstorebase/v1/crx",
+      "age_days": null,
+      "developer_email": null,
+      "extracted_urls": [
+        "https://tc39.es/proposal-import-assertions/",
+        "http://www.cse.yorku.ca/~oz/hash.html",
+        "https://github.com/google/closure-compiler/wiki/Types-in-the-Closure-Type-System#the-javascript-type-language",
+        "http://typescriptlang.org",
+        "https://nodejs.org/api/modules.html#all-together",
+        "https://www.ecma-international.org/ecma-262/6.0/#sec-names-and-keywords",
+        "https://github.com/Microsoft/TypeScript/issues/21246):",
+        "https://github.com/DefinitelyTyped/DefinitelyTyped/tree/master/types/{1}\\",
+        "https://github.com/microsoft/TypeScript/blob/ad4ded80e1d58f0bf36ac16bea71bc10d9f09895/src/compiler/moduleNameResolver.ts#L2509-L2516",
+        "https://mathiasbynens.be/notes/javascript-encoding#surrogate-formulae",
+        "https://github.com/nodejs/node/blob/8f39f51cbbd3b2de14b9ee896e26421cc5b20121/lib/internal/modules/esm/resolve.js#L722",
+        "https://www.w3.org/TR/CSS2/text.html#white-space-model",
+        "https://tc39.github.io/ecma262/#sec-forbodyevaluation",
+        "http://server",
+        "https://github.com/google/closure-compiler/wiki/Generic-Types#multiple-bounded-template-types):",
+        "https://github.com/microsoft/TypeScript/issues/36098",
+        "https://github.com/npm/node-semver#ranges",
+        "http://server/path",
+        "https://github.com/microsoft/typescript-etw",
+        "https://github.com/Microsoft/TypeScript/issues/20809",
+        "http://typescriptlang.org/path/to/",
+        "https://github.com/microsoft/TypeScript/issues/30180",
+        "https://github.com/Microsoft/TypeScript/issues/17494",
+        "https://github.com/nodejs/node/pull/2649",
+        "https://github.com/nodejs/node/pull/32651",
+        "https://edge.microsoft.com/extensionwebstorebase/v1/crx",
+        "http://www.unicode.org/reports/tr31/",
+        "https://github.com/microsoft/TypeScript/issues/44466",
+        "http://typescriptlang.org/",
+        "http://www.unicode.org/Public/6.2.0/ucd/UnicodeData.txt",
+        "https://bugs.chromium.org/p/v8/issues/detail?id=9560",
+        "https://raw.githubusercontent.com/microsoft/TypeScript/v4.9.4/LICENSE.txt",
+        "https://github.com/microsoft/TypeScript/pull/36248/files/5062623f39120171b98870c71344b3242eb03d23#r369766739",
+        "https://tc39.es/ecma262/#sec-runtime-semantics-keyedbindinginitialization",
+        "https://semver.org",
+        "https://docs.npmjs.com/files/package.json",
+        "https://github.com/Microsoft/TypeScript/pull/20547",
+        "https://github.com/Microsoft/TypeScript/issues/18924):",
+        "https://mail.mozilla.org/pipermail/es-discuss/2011-August/016188.html",
+        "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/codePointAt",
+        "https://github.com/Microsoft/TypeScript/issues/7547",
+        "http://www.apache.org/licenses/",
+        "http://www.ecma-international.org/ecma-262/6.0/#sec-for-in-and-for-of-statements",
+        "https://semver.org/#spec-item-2",
+        "https://github.com/Microsoft/TypeScript/issues/4643",
+        "https://code.visualstudio.com/docs/editor/userdefinedsnippets#_snippet-syntax",
+        "https://www.ietf.org/rfc/rfc1738.txt",
+        "https://aka.ms/tsconfig",
+        "https://tc39.github.io/ecma262/#prod-ExportDeclaration",
+        "https://github.com/nodejs/node/issues/5963",
+        "https://nodejs.org/api/crypto.html#crypto_crypto_createhash_algorithm",
+        "https://github.com/nodejs/Release/issues/690",
+        "https://github.com/microsoft/TypeScript/issues/42151",
+        "http://www.unicode.org/Public/3.0-Update/UnicodeData-3.0.0.txt",
+        "https://github.com/nodejs/node/issues/4002",
+        "https://github.com/microsoft/TypeScript/issues/33298",
+        "http://www.ecma-international.org/ecma-262/5.1/#sec-15.3.3",
+        "https://nodejs.org/api/fs.html#fs_fs_realpathsync_path_options",
+        "http://server/",
+        "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Strict_mode",
+        "https://github.com/Microsoft/TypeScript/pull/11547/files",
+        "http://www.ecma-international.org/ecma-262/6.0/#sec-properties-of-the-function-constructor",
+        "https://semver.org/#spec-item-9",
+        "https://nodejs.org/api/inspector.html#inspector_example_usage",
+        "http://www.ecma-international.org/ecma-262/5.1/#sec-15.3.5",
+        "https://github.com/Microsoft/TypeScript/issues/20559",
+        "https://semver.org/#spec-item-10",
+        "https://tc39.github.io/ecma262/#sec-runtime-semantics-keyeddestructuringassignmentevaluation",
+        "https://semver.org/#spec-item-11",
+        "http://www.ecma-international.org/ecma-262/6.0/#sec-function-instances",
+        "https://tc39.es/ecma262/#sec-destructuring-binding-patterns-runtime-semantics-iteratorbindinginitialization",
+        "https://github.com/npm/node-semver#range-grammar",
+        "https://tc39.github.io/ecma262/#sec-iteratorresult-interface",
+        "https://www.w3.org/TR/html4/struct/text.html#h-9.1",
+        "https://en.wikipedia.org/wiki/List_of_XML_and_HTML_character_entity_references",
+        "https://github.com/Microsoft/TypeScript/issues/25652",
+        "http://www.ecma-international.org/ecma-402/2.0/#sec-Intl.Collator.prototype.compare",
+        "https://tc39.es/ecma262/#sec-static-semantics-isstatic",
+        "https://jsbench.me/gjkoxld4au/1",
+        "https://github.com/Microsoft/TypeScript/pull/7591",
+        "http://www.apache.org/licenses/LICENSE-2.0",
+        "https://github.com/nodejs/node/pull/33716",
+        "https://github.com/microsoft/TypeScript/pull/32372#discussion_r328386357",
+        "http://typescriptlang.org/path/to/file.ext",
+        "https://tc39.github.io/ecma262/#sec-iteratorresult-interface:"
+      ],
+      "extracted_ips": [
+        "11.8.6.1",
+        "15.2.1.1",
+        "24.3.2.2",
+        "13.7.4.8"
+      ],
+      "risk_score": "Low",
+      "risk_summary": "Risk: Low\nReason: The extension appears to be a development tool for augmenting sourcemap scopes information, with permissions and extracted URLs suggesting a focus on TypeScript and JavaScript development, and no obvious malicious intent or sensitive data exposure."
+    },
+    {
+      "id": "ghbmnnjooekpmoecnnnilnnbdlolhkhi",
+      "name": "__MSG_extName__",
+      "version": "1.99.1",
+      "author": "docs-hosted-app-own@google.com",
+      "description": "__MSG_extDesc__",
+      "browser": "Edge",
+      "install_path": "C:\\Users\\anura\\AppData\\Local\\Microsoft\\Edge\\User Data\\Default\\Extensions\\ghbmnnjooekpmoecnnnilnnbdlolhkhi\\1.99.1_0",
+      "manifest_content": {
+        "author": {
+          "email": "docs-hosted-app-own@google.com"
+        },
+        "background": {
+          "service_worker": "service_worker_bin_prod.js"
+        },
+        "content_capabilities": {
+          "matches": [
+            "https://docs.google.com/*",
+            "https://drive.google.com/*",
+            "https://drive-autopush.corp.google.com/*",
+            "https://drive-daily-0.corp.google.com/*",
+            "https://drive-daily-1.corp.google.com/*",
+            "https://drive-daily-2.corp.google.com/*",
+            "https://drive-daily-3.corp.google.com/*",
+            "https://drive-daily-4.corp.google.com/*",
+            "https://drive-daily-5.corp.google.com/*",
+            "https://drive-daily-6.corp.google.com/*",
+            "https://drive-preprod.corp.google.com/*",
+            "https://drive-staging.corp.google.com/*"
+          ],
+          "permissions": [
+            "clipboardRead",
+            "clipboardWrite",
+            "unlimitedStorage"
+          ]
+        },
+        "content_security_policy": {
+          "extension_pages": "script-src 'self'; object-src 'self'"
+        },
+        "default_locale": "en_US",
+        "description": "__MSG_extDesc__",
+        "externally_connectable": {
+          "matches": [
+            "https://docs.google.com/*",
+            "https://drive.google.com/*",
+            "https://drive-autopush.corp.google.com/*",
+            "https://drive-daily-0.corp.google.com/*",
+            "https://drive-daily-1.corp.google.com/*",
+            "https://drive-daily-2.corp.google.com/*",
+            "https://drive-daily-3.corp.google.com/*",
+            "https://drive-daily-4.corp.google.com/*",
+            "https://drive-daily-5.corp.google.com/*",
+            "https://drive-daily-6.corp.google.com/*",
+            "https://drive-preprod.corp.google.com/*",
+            "https://drive-staging.corp.google.com/*"
+          ]
+        },
+        "host_permissions": [
+          "https://docs.google.com/*",
+          "https://drive.google.com/*"
+        ],
+        "icons": {
+          "128": "128.png"
+        },
+        "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAnF7RGLAxIon0/XeNZ4MLdP3DMkoORzEAKVg0sb89JpA/W2osTHr91Wqwdc9lW0mFcSpCYS9Y3e7cUMFo/M2ETASIuZncMiUzX2/0rrWtGQ3UuEj3KSe5PdaVZfisyJw/FebvHwirEWrhqcgzVUj9fL9YjE0G45d1zMKcc1umKvLqPyTznNuKBZ9GJREdGLRJCBmUgCkI8iwtwC+QZTUppmaD50/ksnEUXv+QkgGN07/KoNA5oAgo49Jf1XBoMv4QXtVZQlBYZl84zAsI82hb63a6Gu29U/4qMWDdI7+3Ne5TRvo6Zi3EI4M2NQNplJhik105qrz+eTLJJxvf4slrWwIDAQAB",
+        "manifest_version": 3,
+        "minimum_chrome_version": "88",
+        "name": "__MSG_extName__",
+        "permissions": [
+          "alarms",
+          "storage",
+          "unlimitedStorage",
+          "offscreen"
+        ],
+        "storage": {
+          "managed_schema": "dasherSettingSchema.json"
+        },
+        "update_url": "https://clients2.google.com/service/update2/crx",
+        "version": "1.99.1",
+        "web_accessible_resources": [
+          {
+            "matches": [
+              "<all_urls>"
+            ],
+            "resources": [
+              "page_embed_script.js"
+            ]
+          }
+        ]
+      },
+      "permissions": [
+        "alarms",
+        "storage",
+        "unlimitedStorage",
+        "offscreen"
+      ],
+      "csp": "{\"extension_pages\": \"script-src 'self'; object-src 'self'\"}",
+      "update_url": "https://clients2.google.com/service/update2/crx",
+      "age_days": null,
+      "developer_email": null,
+      "extracted_urls": [
+        "https://drive-autopush.corp.google.com/*",
+        "https://drive-daily-2.corp.google.com/*",
+        "https://www.gstatic.com/_/apps-fileview/_/js/",
+        "https://drive-preprod.corp.google.com/*",
+        "http://www.broofa.com",
+        "https://drive-daily-1.corp.google.com/*",
+        "https://drive-daily-4.corp.google.com/*",
+        "https://drive-daily-6.corp.google.com/*",
+        "https://drive.google.com/*",
+        "https://drive-daily-0.corp.google.com/*",
+        "https://drive-daily-3.corp.google.com/*",
+        "https://drive-daily-5.corp.google.com/*",
+        "https://clients2.google.com/service/update2/crx",
+        "https://cdnjs.cloudflare.com/ajax/libs/mathjax/;secured-pixel.com;Can",
+        "https://meet\\\\.google\\\\.com/.*meetsw.*load",
+        "https://drive-staging.corp.google.com/*",
+        "https://docs.google.com/*"
+      ],
+      "extracted_ips": [],
+      "risk_score": "Low",
+      "risk_summary": "Risk: Low\nReason: The extension is authored by Google and has a limited set of permissions, with no extracted IPs and mostly Google-owned URLs, indicating a low risk of malicious activity."
+    },
+    {
+      "id": "jmjflgjpcpepeafmmgdpfkogkghcpiha",
+      "name": "Edge relevant text changes",
+      "version": "1.2.1",
+      "author": "",
+      "description": "Edge relevant text changes on select websites to improve user experience and precisely surfaces the action they want to take.",
+      "browser": "Edge",
+      "install_path": "C:\\Users\\anura\\AppData\\Local\\Microsoft\\Edge\\User Data\\Default\\Extensions\\jmjflgjpcpepeafmmgdpfkogkghcpiha\\1.2.1_0",
+      "manifest_content": {
+        "content_scripts": [
+          {
+            "js": [
+              "content.js"
+            ],
+            "matches": [
+              "https://chrome.google.com/webstore/*"
+            ]
+          },
+          {
+            "js": [
+              "content_new.js"
+            ],
+            "matches": [
+              "https://chromewebstore.google.com/*"
+            ]
+          }
+        ],
+        "description": "Edge relevant text changes on select websites to improve user experience and precisely surfaces the action they want to take.",
+        "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAu06p2Mjoy6yJDUUjCe8Hnqvtmjll73XqcbylxFZZWe+MCEAEK+1D0Nxrp0+IuWJL02CU3jbuR5KrJYoezA36M1oSGY5lIF/9NhXWEx5GrosxcBjxqEsdWv/eDoOOEbIvIO0ziMv7T1SUnmAA07wwq8DXWYuwlkZU/PA0Mxx0aNZ5+QyMfYqRmMpwxkwPG8gyU7kmacxgCY1v7PmmZo1vSIEOBYrxl064w5Q6s/dpalSJM9qeRnvRMLsszGY/J2bjQ1F0O2JfIlBjCOUg/89+U8ZJ1mObOFrKO4um8QnenXtH0WGmsvb5qBNrvbWNPuFgr2+w5JYlpSQ+O8zUCb8QZwIDAQAB",
+        "manifest_version": 3,
+        "name": "Edge relevant text changes",
+        "update_url": "https://edge.microsoft.com/extensionwebstorebase/v1/crx",
+        "version": "1.2.1"
+      },
+      "permissions": [],
+      "csp": "",
+      "update_url": "https://edge.microsoft.com/extensionwebstorebase/v1/crx",
+      "age_days": null,
+      "developer_email": null,
+      "extracted_urls": [
+        "https://chrome.google.com/webstore/*",
+        "https://www.google.com/chrome",
+        "https://chromewebstore.google.com/*",
+        "https://edge.microsoft.com/extensionwebstorebase/v1/crx"
+      ],
+      "extracted_ips": [],
+      "risk_score": "Medium",
+      "risk_summary": "Risk: Medium\nReason: The extension has unclear authorship and requests permissions to modify website content, which could potentially be used for malicious purposes, but the extracted URLs suggest it may be a legitimate Microsoft Edge extension, warranting a medium risk level."
+    },
+    {
+      "id": "kfbdpdaobnofkbopebjglnaadopfikhh",
+      "name": "Microsoft Edge DevTools Enhancements",
+      "version": "113.0.1765.0",
+      "author": "",
+      "description": "Microsoft Edge DevTools Enhancements",
+      "browser": "Edge",
+      "install_path": "C:\\Users\\anura\\AppData\\Local\\Microsoft\\Edge\\User Data\\Default\\Extensions\\kfbdpdaobnofkbopebjglnaadopfikhh\\113.0.1765.0_0",
+      "manifest_content": {
+        "description": "Microsoft Edge DevTools Enhancements",
+        "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAxx2oBf3foCCxdn8gQWEGh6HQhGfz+kbpzYJSgAiMy8T6NFVYRfECBK/oZad9hKR317bgpyQlAeaueDu7K2f1NtRKVKA/RCiYUcDp9hyaDmoXn0+ayis97+1Rvl13IGToAqxehQ9T8ZNz4B1uRegJpNHpKA9LCW4uUh6iTC0hMKKTfEXMUVZQ6uQEeXRb+YpB7ZlesFcEZvnbbs2yj4BvjOXWaaxxWTJE0f3hu2dAPgQ4YMp3wluI7eKH475okTdJsdSR4yfcMwx9UHLqp6tUTENAUrb724HWF5yZ+sqAixHJ+TqNxWjGA6L+8zR1kww+OyT7Irh+9400VuQwLtLaswIDAQAB",
+        "manifest_version": 3,
+        "name": "Microsoft Edge DevTools Enhancements",
+        "update_url": "https://edge.microsoft.com/extensionwebstorebase/v1/crx",
+        "version": "113.0.1765.0"
+      },
+      "permissions": [],
+      "csp": "",
+      "update_url": "https://edge.microsoft.com/extensionwebstorebase/v1/crx",
+      "age_days": null,
+      "developer_email": null,
+      "extracted_urls": [
+        "https://tc39.es/proposal-import-assertions/",
+        "http://www.cse.yorku.ca/~oz/hash.html",
+        "https://github.com/google/closure-compiler/wiki/Types-in-the-Closure-Type-System#the-javascript-type-language",
+        "http://typescriptlang.org",
+        "https://nodejs.org/api/modules.html#all-together",
+        "https://www.ecma-international.org/ecma-262/6.0/#sec-names-and-keywords",
+        "https://github.com/Microsoft/TypeScript/issues/21246):",
+        "https://github.com/microsoft/TypeScript/blob/ad4ded80e1d58f0bf36ac16bea71bc10d9f09895/src/compiler/moduleNameResolver.ts#L2509-L2516",
+        "https://mathiasbynens.be/notes/javascript-encoding#surrogate-formulae",
+        "https://github.com/nodejs/node/blob/8f39f51cbbd3b2de14b9ee896e26421cc5b20121/lib/internal/modules/esm/resolve.js#L722",
+        "https://www.w3.org/TR/CSS2/text.html#white-space-model",
+        "https://tc39.github.io/ecma262/#sec-forbodyevaluation",
+        "https://github.com/DefinitelyTyped/DefinitelyTyped/tree/master/types/{1}",
+        "http://server",
+        "https://github.com/google/closure-compiler/wiki/Generic-Types#multiple-bounded-template-types):",
+        "https://github.com/microsoft/TypeScript/issues/36098",
+        "https://github.com/npm/node-semver#ranges",
+        "http://server/path",
+        "https://github.com/microsoft/typescript-etw",
+        "https://github.com/Microsoft/TypeScript/issues/20809",
+        "http://typescriptlang.org/path/to/",
+        "https://github.com/microsoft/TypeScript/issues/30180",
+        "https://github.com/Microsoft/TypeScript/issues/17494",
+        "https://github.com/nodejs/node/pull/2649",
+        "https://github.com/nodejs/node/pull/32651",
+        "https://edge.microsoft.com/extensionwebstorebase/v1/crx",
+        "http://www.unicode.org/reports/tr31/",
+        "https://github.com/microsoft/TypeScript/issues/44466",
+        "http://typescriptlang.org/",
+        "http://www.unicode.org/Public/6.2.0/ucd/UnicodeData.txt",
+        "https://bugs.chromium.org/p/v8/issues/detail?id=9560",
+        "https://raw.githubusercontent.com/microsoft/TypeScript/v4.9.4/LICENSE.txt",
+        "https://github.com/microsoft/TypeScript/pull/36248/files/5062623f39120171b98870c71344b3242eb03d23#r369766739",
+        "https://tc39.es/ecma262/#sec-runtime-semantics-keyedbindinginitialization",
+        "https://semver.org",
+        "https://docs.npmjs.com/files/package.json",
+        "https://github.com/jquery/PEP",
+        "https://github.com/Microsoft/TypeScript/pull/20547",
+        "https://github.com/Microsoft/TypeScript/issues/18924):",
+        "https://mail.mozilla.org/pipermail/es-discuss/2011-August/016188.html",
+        "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/codePointAt",
+        "https://github.com/Microsoft/TypeScript/issues/7547",
+        "http://www.apache.org/licenses/",
+        "http://www.ecma-international.org/ecma-262/6.0/#sec-for-in-and-for-of-statements",
+        "https://semver.org/#spec-item-2",
+        "https://github.com/Microsoft/TypeScript/issues/4643",
+        "https://code.visualstudio.com/docs/editor/userdefinedsnippets#_snippet-syntax",
+        "https://www.ietf.org/rfc/rfc1738.txt",
+        "https://aka.ms/tsconfig",
+        "https://tc39.github.io/ecma262/#prod-ExportDeclaration",
+        "https://github.com/nodejs/node/issues/5963",
+        "https://github.com/nodejs/Release/issues/690",
+        "https://github.com/microsoft/TypeScript/issues/42151",
+        "http://www.unicode.org/Public/3.0-Update/UnicodeData-3.0.0.txt",
+        "https://github.com/nodejs/node/issues/4002",
+        "https://github.com/microsoft/TypeScript/issues/33298",
+        "http://www.ecma-international.org/ecma-262/5.1/#sec-15.3.3",
+        "http://server/",
+        "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Strict_mode",
+        "https://github.com/Microsoft/TypeScript/pull/11547/files",
+        "https://snippet.babylonjs.com",
+        "http://www.ecma-international.org/ecma-262/6.0/#sec-properties-of-the-function-constructor",
+        "https://semver.org/#spec-item-9",
+        "https://nodejs.org/api/inspector.html#inspector_example_usage",
+        "http://www.ecma-international.org/ecma-262/5.1/#sec-15.3.5",
+        "https://github.com/Microsoft/TypeScript/issues/20559",
+        "https://semver.org/#spec-item-10",
+        "https://tc39.github.io/ecma262/#sec-runtime-semantics-keyeddestructuringassignmentevaluation",
+        "https://semver.org/#spec-item-11",
+        "http://www.ecma-international.org/ecma-262/6.0/#sec-function-instances",
+        "https://tc39.es/ecma262/#sec-destructuring-binding-patterns-runtime-semantics-iteratorbindinginitialization",
+        "https://github.com/npm/node-semver#range-grammar",
+        "https://tc39.github.io/ecma262/#sec-iteratorresult-interface",
+        "https://www.w3.org/TR/html4/struct/text.html#h-9.1",
+        "https://en.wikipedia.org/wiki/List_of_XML_and_HTML_character_entity_references",
+        "https://github.com/Microsoft/TypeScript/issues/25652",
+        "http://www.ecma-international.org/ecma-402/2.0/#sec-Intl.Collator.prototype.compare",
+        "https://tc39.es/ecma262/#sec-static-semantics-isstatic",
+        "https://jsbench.me/gjkoxld4au/1",
+        "https://github.com/Microsoft/TypeScript/pull/7591",
+        "http://www.apache.org/licenses/LICENSE-2.0",
+        "https://github.com/nodejs/node/pull/33716",
+        "https://github.com/microsoft/TypeScript/pull/32372#discussion_r328386357",
+        "http://typescriptlang.org/path/to/file.ext",
+        "https://tc39.github.io/ecma262/#sec-iteratorresult-interface:"
+      ],
+      "extracted_ips": [
+        "11.8.6.1",
+        "15.2.1.1",
+        "24.3.2.2",
+        "13.7.4.8"
+      ],
+      "risk_score": "Low",
+      "risk_summary": "Risk: Low\nReason: The extension is developed by Microsoft, has a limited set of permissions not explicitly stated, and the extracted URLs and IPs appear to be related to legitimate development and documentation resources, indicating a low risk of malicious activity."
+    }
+  ]
+}
